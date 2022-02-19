@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc(){
+            var n1 = parseFloat(document.getElementById("n1").value);
+            var n2 = parseFloat(document.getElementById("n2").value);
+            var opr = document.getElementById("opr").value;
+            switch(opr){
+                case "+": document.getElementById("result").value = n1+n2;
+                break;
+                case "-": document.getElementById("result").value = n1-n2;
+                break;
+                case "/": document.getElementById("result").value = n1/n2;
+                break;
+                case "%": document.getElementById("result").value = n1%n2;
+                break;
+                case "*": document.getElementById("result").value = n1*n2;
+                break;
+                default: alert("enter operator is not valid");
+                break;
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>simple calculator</h1>
+    <table>
+        <tr>
+            <td>n1:</td>
+            <td> <input type="text" id="n1" maxlength="5"></td>
+        </tr>
+        <tr>
+            <td>opr:</td>
+            <td> <input type="text" id="opr" maxlength="1"></td>
+        </tr>
+        <tr>
+            <td>n2:</td>
+            <td> <input type="text" id="n2" maxlength="5"></td>
+        </tr>
+    </table>
+    <button onclick="calc()">calculator</button>
+    <table>
+        <tr>
+            <td>result:</td>
+            <td><input type="text" id="result" maxlength="10"></td>
+        </tr>
+    </table>
+    
+</body>
+</html>
